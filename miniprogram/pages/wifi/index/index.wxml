@@ -1,0 +1,19 @@
+<view class="container">
+	<view class="userinfo">
+		<button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})" size="default"></button>
+		<view class="userinfo-nickname-wrapper">
+		<!-- <view class="userinfo-nickname">{{userInfo.nickName}}</view> -->
+		<view  class="paddingLeft10">{{userInfo.nickName}}</view>
+			<!-- <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button> -->
+		</view>
+	</view>
+
+	<text decode="{{true}}">&nbsp;</text>
+	<button bindtap="createWifi" plain="true">生成Wi-Fi二维码</button>
+	<text decode="{{true}}">&nbsp;</text>
+	<!-- <button bindtap="connectWifi">wifi</button> -->
+	<button bindtap='getScancode' plain="true">扫码连接Wi-Fi</button>
+	<view wx:if="{{result !=''}}">
+		<view>扫码的内容:{{result}}</view>
+	</view>
+</view>

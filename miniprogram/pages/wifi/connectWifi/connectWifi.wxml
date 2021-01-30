@@ -1,0 +1,10 @@
+<view class="container">
+  <!-- <button bindtap="connectWifi">wifi</button> -->
+  <view>
+    <view>{{msg}}</view>
+    <view wx:if="{{viewAccount !='' && viewPassword !=''}}">
+      <view>账户：{{viewAccount}}</view>
+      <view>密码：{{viewPassword}}</view>
+    </view>
+  </view>
+</view>
